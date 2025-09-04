@@ -443,6 +443,9 @@
                 justify-content: center;
             }
 
+           .hero {
+              padding: 140px 0 60px; 
+          }
             .hero h1 {
                 font-size: 2.2rem;
             }
