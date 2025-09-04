@@ -425,6 +425,13 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+             body {
+              padding-top: 120px;
+        }
+             header {
+               height: 120px; /* Фиксированная высота для мобильных */
+               padding: 10px 0;
+        }       
             .header-content {
                 flex-direction: column;
                 gap: 15px;
