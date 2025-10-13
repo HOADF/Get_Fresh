@@ -1,30 +1,42 @@
- // Фиксация хедера при скролле
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 100) {
-                header.classList.add('header-scrolled');
-            } else {
-                header.classList.remove('header-scrolled');
-            }
-        });
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+  // год в футере
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-        // Плавная прокрутка к якорям
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+  // плавная прокрутка к якорям
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e){
+      const href = this.getAttribute('href');
+      if(!href || href === '#') return;
+      const target = document.querySelector(href);
+      if(target){
+        e.preventDefault();
+        target.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    });
+  });
 
-        // Обработка формы
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Спасибо! Ваша заявка принята. Мы свяжемся с вами в течение 15 минут.');
-            this.reset();
-        });
+  // обработка формы (локально)
+  const form = document.getElementById('contact-form');
+  if(form){
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = form.querySelector('#name').value.trim();
+      const phone = form.querySelector('#phone').value.trim();
+      const service = form.querySelector('#service').value;
+      // В реальном проекте — отправка на сервер через fetch/ajax.
+      alert(`Спасибо, ${name || 'Клиент'}!\nЗаявка принята.\nСервис: ${service}\nМы свяжемся по номеру: ${phone}`);
+      form.reset();
+    });
+  }
+
+  // добавим простой эффект: при скролле — хедер получает тень
+  const header = document.getElementById('header');
+  const onScroll = () => {
+    if(window.scrollY > 60) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', onScroll);
+  onScroll();
+});
