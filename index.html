@@ -1,220 +1,159 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Профессиональный клининг для вашего пространства</title>
-    <meta name="description" content="Профессиональная уборка квартир, офисов и коммерческих помещений. Качественно, быстро, с гарантией.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DemoClean — чистота, которую видно</title>
+  <meta name="description" content="Профессиональный клининг квартир и офисов. Быстро. Надёжно. Чисто.">
+  <link rel="stylesheet" href="style.css">
+  <!-- font-awesome CDN для иконок (нужен интернет) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header id="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <div class="logo-icon"><i class="fas fa-sparkles"></i></div>
-                    <div class="logo-text">Клининговая<span>Компания</span></div>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#services">Услуги</a></li>
-                        <li><a href="#process">Как работаем</a></li>
-                        <li><a href="#prices">Цены</a></li>
-                        <li><a href="#reviews">Отзывы</a></li>
-                        <li><a href="#contact">Контакты</a></li>
-                    </ul>
-                </nav>
-                <div class="header-cta">
-                    <a href="#contact" class="btn">Заказать уборку</a>
-                </div>
-            </div>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">Профессиональный клининг</div>
-                <h1>Идеальная чистота без ваших усилий</h1>
-                <p>Профессиональная уборка квартир, офисов и коммерческих помещений. Наслаждайтесь безупречной чистотой while мы делаем всю работу.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn">Заказать уборку</a>
-                    <a href="#services" class="btn btn-outline">Наши услуги</a>
-                </div>
-            </div>
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <div class="logo"><i class="fa-solid fa-bubbles"></i> Demo<span>Clean</span></div>
+
+      <nav class="bubble-menu" aria-label="Главное меню">
+        <a href="#services" class="bubble" title="Услуги"><i class="fa-solid fa-spray-can-sparkles"></i></a>
+        <a href="#about" class="bubble" title="О нас"><i class="fa-solid fa-info-circle"></i></a>
+        <a href="#contact" class="bubble" title="Контакты"><i class="fa-solid fa-envelope"></i></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home" aria-label="Главный баннер">
+      <div class="hero-inner container">
+        <div class="hero-badge">Профессиональный клининг</div>
+        <h1>Идеальная чистота без ваших усилий</h1>
+        <p>Качественная уборка квартир, офисов и коммерческих помещений — быстро, безопасно и с гарантией результата.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#contact">Оставить заявку</a>
+          <a class="btn btn-outline" href="#services">Наши услуги</a>
         </div>
+      </div>
+      <!-- лёгкие анимированные пузырьки (через CSS) -->
+      <div class="bubbles" aria-hidden="true"></div>
     </section>
 
     <!-- Services -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Наши услуги</h2>
-                <p>Комплексные решения для поддержания идеальной чистоты в вашем пространстве</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-home"></i></div>
-                    <h3>Уборка квартир</h3>
-                    <p>Комплексная уборка всех помещений с использованием профессиональной химии и оборудования</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-building"></i></div>
-                    <h3>Уборка офисов</h3>
-                    <p>Регулярная уборка рабочих пространств для поддержания продуктивной атмосферы</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-store"></i></div>
-                    <h3>Коммерческая уборка</h3>
-                    <p>Уборка торговых центров, ресторанов и других коммерческих помещений</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-tint"></i></div>
-                    <h3>Химчистка</h3>
-                    <p>Профессиональная химчистка ковров, мебели и других поверхностей</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-calendar-alt"></i></div>
-                    <h3>Регулярная уборка</h3>
-                    <p>Ежедневное, еженедельное или ежемесячное обслуживание по подписке</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-star"></i></div>
-                    <h3>Генеральная уборка</h3>
-                    <p>Тщательная уборка всех поверхностей с дезинфекцией и устранением сложных загрязнений</p>
-                </div>
-            </div>
+    <section id="services" class="services container">
+      <div class="section-title">
+        <h2>Наши услуги</h2>
+        <p>Комплексные решения для поддержания идеальной чистоты</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-house"></i></div>
+          <h3>Уборка квартир</h3>
+          <p>Комплексная уборка всех помещений с профессиональной химией и оборудованием.</p>
         </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-building"></i></div>
+          <h3>Уборка офисов</h3>
+          <p>Регулярная уборка рабочих пространств для поддержания продуктивной атмосферы.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-shop"></i></div>
+          <h3>Коммерческая уборка</h3>
+          <p>Уборка торговых точек, ресторанов и складских помещений с учётом требований бизнеса.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-wand-sparkles"></i></div>
+          <h3>Генеральная уборка</h3>
+          <p>Тщательная очистка с удалением сложных загрязнений и дезинфекцией поверхностей.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-hand-holding-droplet"></i></div>
+          <h3>Химчистка</h3>
+          <p>Профессиональная чистка ковров и мебели с возвратом свежести и цвета.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-calendar-days"></i></div>
+          <h3>Регулярная уборка</h3>
+          <p>Гибкие графики: ежедневная, еженедельная или по подписке — вам подойдёт.</p>
+        </div>
+      </div>
     </section>
 
-    <!-- Process -->
-    <section class="process" id="process">
-        <div class="container">
-            <div class="section-title">
-                <h2>Как мы работаем</h2>
-                <p>Простой и прозрачный процесс от заявки до идеальной чистоты</p>
-            </div>
-            <div class="process-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Заявка</h3>
-                    <p>Оставляете заявку на сайте или по телефону</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Расчёт</h3>
-                    <p>Рассчитываем стоимость и согласовываем детали</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Уборка</h3>
-                    <p>Наша команда проводит качественную уборку</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>Результат</h3>
-                    <p>Вы наслаждаетесь безупречной чистотой</p>
-                </div>
-            </div>
+    <!-- About -->
+    <section id="about" class="about container">
+      <div class="section-title">
+        <h2>О нас</h2>
+        <p>Опытная команда, индивидуальный подход и прозрачные цены.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Наша миссия — сделать ваш дом или офис безопаснее и комфортнее. Мы используем только сертифицированные средства и современное оборудование.</p>
         </div>
+        <div class="about-features">
+          <ul>
+            <li>Гарантия качества</li>
+            <li>Экологичные средства</li>
+            <li>Оперативный выезд</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Готовы к идеальной чистоте?</h2>
-            <p>Оставьте заявку и получите бесплатную консультацию от нашего специалиста</p>
-            <a href="#contact" class="btn">Оставить заявку</a>
-        </div>
-    </section>
+    <!-- Contact -->
+    <section id="contact" class="contact container">
+      <div class="section-title">
+        <h2>Оставить заявку</h2>
+        <p>Заполните форму — мы свяжемся в течение 15 минут.</p>
+      </div>
 
-    <!-- Contact Form -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Оставить заявку</h2>
-                <p>Заполните форму и мы свяжемся с вами в течение 15 минут</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Контакты</h3>
-                    <p><i class="fas fa-phone"></i> +7 (800) 123-45-67</p>
-                    <p><i class="fas fa-envelope"></i> info@getclean.ru</p>
-                    <p><i class="fas fa-clock"></i> Ежедневно с 8:00 до 22:00</p>
-                </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Ваше имя</label>
-                        <input type="text" id="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Телефон</label>
-                        <input type="tel" id="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="service">Услуга</label>
-                        <select id="service">
-                            <option>Уборка квартиры</option>
-                            <option>Уборка офиса</option>
-                            <option>Коммерческая уборка</option>
-                            <option>Генеральная уборка</option>
-                            <option>Химчистка</option>
-                            <option>Регулярная уборка</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Дополнительная информация</label>
-                        <textarea id="message"></textarea>
-                    </div>
-                    <button type="submit" class="btn">Отправить заявку</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>GetClean</h3>
-                    <p>Профессиональные клининговые услуги для вашего пространства. Качество, которому можно доверять.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Услуги</h3>
-                    <ul>
-                        <li><a href="#">Уборка квартир</a></li>
-                        <li><a href="#">Уборка офисов</a></li>
-                        <li><a href="#">Коммерческая уборка</a></li>
-                        <li><a href="#">Химчистка</a></li>
-                        <li><a href="#">Генеральная уборка</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Контакты</h3>
-                    <ul>
-                        <li><a href="tel:+78001234567">+7 (800) 123-45-67</a></li>
-                        <li><a href="mailto:info@getclean.ru">info@getclean.ru</a></li>
-                        <li>г. Москва, ул. Чистая, д. 15</li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Социальные сети</h3>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-vk"></i></a>
-                        <a href="#"><i class="fab fa-telegram"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-            </div>
+      <div class="contact-grid">
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+            <input type="tel" id="phone" name="phone" placeholder="Телефон" required>
           </div>
-    </footer>
+          <div class="form-row">
+            <select id="service" name="service">
+              <option>Уборка квартиры</option>
+              <option>Уборка офиса</option>
+              <option>Коммерческая уборка</option>
+              <option>Генеральная уборка</option>
+              <option>Химчистка</option>
+            </select>
+          </div>
 
-    <script src="script.js"></script>
+          <div class="form-row">
+            <textarea id="message" name="message" rows="5" placeholder="Дополнительная информация (необязательно)"></textarea>
+          </div>
+
+          <div class="form-row">
+            <button type="submit" class="btn">Отправить заявку</button>
+          </div>
+        </form>
+
+        <div class="contact-info">
+          <h3>Контакты</h3>
+          <p><i class="fa-solid fa-phone"></i> +7 (800) 123-45-67</p>
+          <p><i class="fa-solid fa-envelope"></i> info@democlean.example</p>
+          <p><i class="fa-solid fa-map-marker-alt"></i> г. Москва, ул. Чистая, д. 15</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> DemoClean — Все права защищены</div>
+      <div class="footer-note">Разработано HOADF</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
